@@ -18,12 +18,10 @@ const App = () => {
 
   let body;
 
-  if (finalValue === 'yes' && open) {
+  if ((finalValue === 'yes' || finalValue === 'no') && open) {
     body = <UserModal finalValue={finalValue} setOpen={setOpen} />;
   }
-  if (finalValue === 'no' && open) {
-    body = <UserModal finalValue={finalValue} setOpen={setOpen} />;
-  }
+
   return (
     <Box className={classes.main}>
       <a
