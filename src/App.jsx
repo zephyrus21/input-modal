@@ -9,10 +9,10 @@ const App = () => {
   let body;
 
   if (finalValue === 'yes' && open) {
-    body = <UserModal setOpen={setOpen} />;
+    body = <UserModal finalValue={finalValue} setOpen={setOpen} />;
   }
   if (finalValue === 'no' && open) {
-    body = <UserModal setOpen={setOpen} />;
+    body = <UserModal finalValue={finalValue} setOpen={setOpen} />;
   }
   return (
     <>
