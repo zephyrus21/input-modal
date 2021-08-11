@@ -1,0 +1,13 @@
+
+1) There should be two child components and one parent component.
+	1) first child component- one input box and submit btn
+	2) second child component - one modal
+
+	- once you type "yes" in input box and submit, the modal in other child component will open with background green or a beautiful icon on center
+	- if typed "no" and submit, the modal will open with background red or a beautiful icon on center
+
+notes:- you have to use conventional way. no use of context api or any state management tool
+	- use material ui for modal and btn.
+	- style as per your wish.
+	- please use codesandbox and share the link of the project before 9pm on 11th Aug. 
+	- https://codesandbox.io/s/new
