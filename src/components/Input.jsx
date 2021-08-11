@@ -17,6 +17,7 @@ const useStyles = makeStyles({
 const Input = ({ setFinalValue, setOpen }) => {
   const classes = useStyles();
   const [value, setValue] = useState('');
+  let error = '';
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -27,6 +28,8 @@ const Input = ({ setFinalValue, setOpen }) => {
     if (value === 'no') {
       setFinalValue('no');
       setOpen(true);
+    } else {
+      alert('Please enter yes or no only!');
     }
     setValue('');
   };
