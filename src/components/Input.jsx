@@ -28,8 +28,6 @@ const Input = ({ setFinalValue, setOpen }) => {
     if (value === 'no') {
       setFinalValue('no');
       setOpen(true);
-    } else {
-      alert('Please enter yes or no only!');
     }
     setValue('');
   };
