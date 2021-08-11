@@ -6,8 +6,10 @@ import yes from '../Assets/yes.gif';
 import no from '../Assets/no.gif';
 
 const useStyles = makeStyles({
-  gap: {
+  modalContainer: {
     gap: '20px',
+    height: '60vh',
+    paddingBottom: '20px',
   },
   modal: {
     display: 'flex',
@@ -15,14 +17,16 @@ const useStyles = makeStyles({
     justifyContent: 'center',
     padding: '20px',
     color: 'white',
-    height: '300px',
-    width: '300px',
+    height: '100%',
+    width: '30%',
   },
 });
 
 const UserModal = ({ setOpen, finalValue }) => {
+  const classes = useStyles();
   let bgColor;
   let icon;
+
   if (finalValue === 'yes') {
     bgColor = 'green';
     icon = yes;
@@ -32,7 +36,6 @@ const UserModal = ({ setOpen, finalValue }) => {
     icon = no;
   }
 
-  const classes = useStyles();
   return (
     <Box
       marginTop={4}
@@ -40,7 +43,7 @@ const UserModal = ({ setOpen, finalValue }) => {
       display='flex'
       justifyContent='center'
       alignItems='center'
-      className={classes.gap}>
+      className={classes.modalContainer}>
       <Paper
         style={{ backgroundColor: `${bgColor}` }}
         className={classes.modal}

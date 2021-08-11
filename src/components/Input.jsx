@@ -1,9 +1,21 @@
 import React, { useState } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 
+const useStyles = makeStyles({
+  inputContainer: {
+    gap: '16px',
+    backgroundImage: 'linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%)',
+    padding: '30px',
+    borderRadius: '20px',
+    boxShadow: 'rgba(0, 0, 0, 0.4) 0px 3px 8px',
+  },
+});
+
 const Input = ({ setFinalValue, setOpen }) => {
+  const classes = useStyles();
   const [value, setValue] = useState('');
 
   const submitHandler = (e) => {
@@ -21,22 +33,23 @@ const Input = ({ setFinalValue, setOpen }) => {
 
   return (
     <Box
-      marginTop={4}
+      paddingTop={6}
       display='flex'
       justifyContent='center'
       alignItems='center'>
       <form onSubmit={submitHandler}>
         <Box
           display='flex'
+          flexDirection='column'
           alignItems='center'
-          style={{
-            gap: '16px',
-          }}>
+          className={classes.inputContainer}>
           <TextField
-            label='Input'
+            variant='outlined'
+            autoFocus
+            label='Input yes or no'
             value={value}
             type='text'
-            onChange={(e) => setValue(e.target.value)}
+            onChange={(e) => setValue(e.target.value.toLowerCase())}
           />
           <Button variant='contained' color='primary' type='submit'>
             Submit
