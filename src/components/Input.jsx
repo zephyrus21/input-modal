@@ -17,16 +17,11 @@ const useStyles = makeStyles({
 const Input = ({ setFinalValue, setOpen }) => {
   const classes = useStyles();
   const [value, setValue] = useState('');
-  let error = '';
 
   const submitHandler = (e) => {
     e.preventDefault();
-    if (value === 'yes') {
-      setFinalValue('yes');
-      setOpen(true);
-    }
-    if (value === 'no') {
-      setFinalValue('no');
+    if (value === 'yes' || value === 'no') {
+      setFinalValue(value);
       setOpen(true);
     }
     setValue('');

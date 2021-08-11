@@ -24,11 +24,6 @@ const App = () => {
 
   return (
     <Box className={classes.main}>
-      <a
-        style={{ position: 'fixed', top: '10px', right: '10px' }}
-        href='https://github.com/zephyrus21/input-modal'>
-        <img src='https://img.icons8.com/ios-glyphs/40/000000/github.png' />
-      </a>
       <Input setFinalValue={setFinalValue} setOpen={setOpen} />
       {body}
     </Box>
