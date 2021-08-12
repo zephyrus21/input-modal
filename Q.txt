@@ -1,5 +1,5 @@
 
-1) There should be two child components and one parent component.
+=> There should be two child components and one parent component.
 	1) first child component- one input box and submit btn
 	2) second child component - one modal
 
